@@ -5,7 +5,7 @@ A simple clipboard utility for piping content to xclip.
 ## Install
 
 ```bash
-gem install clip
+gem install clip.rb
 ```
 
 Requires `xclip` to be installed on your system.

@@ -3,7 +3,7 @@
 require_relative "lib/clip/version"
 
 Gem::Specification.new do |spec|
-  spec.name = "clip"
+  spec.name = "clip.rb"
   spec.version = Clip::VERSION
   spec.authors = ["Nathan Kidd"]
   spec.email = ["nathankidd@hey.com"]
