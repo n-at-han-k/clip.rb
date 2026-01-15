@@ -30,6 +30,9 @@ cat more.txt | clip -a
 
 # Paste clipboard contents to stdout
 clip
+
+# Copy grep results to clipboard
+grep -rn "TODO" src/ | clip
 ```
 
 ### Options
