@@ -32,6 +32,7 @@ cat more.txt | clip -a
 clip
 
 # Grep outputs filename AND content:
+grep -rn "TODO" src/
 # src/app.rb:42:# TODO: refactor this
 # src/app.rb:87:# TODO: add tests
 # src/lib.rb:12:# TODO: fix bug
