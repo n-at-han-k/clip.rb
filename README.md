@@ -31,8 +31,13 @@ cat more.txt | clip -a
 # Paste clipboard contents to stdout
 clip
 
-# Copy first 5 grep matches to clipboard
-grep -rn "TODO" src/ | clip -l 5
+# Grep outputs filename AND content:
+# src/app.rb:42:# TODO: refactor this
+# src/app.rb:87:# TODO: add tests
+# src/lib.rb:12:# TODO: fix bug
+
+# Use -l 1 to copy just the first match (with filename)
+grep -rn "TODO" src/ | clip -l 1
 ```
 
 ### Options
