@@ -15,7 +15,7 @@ Gem::Specification.new do |spec|
     for line limits, markdown wrapping, appending, and echoing output.
   DESC
 
-  spec.homepage = "https://github.com/n-at-han-k/clip"
+  spec.homepage = "https://github.com/n-at-han-k/clip.rb"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 3.2.0"
 
