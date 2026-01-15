@@ -31,8 +31,8 @@ cat more.txt | clip -a
 # Paste clipboard contents to stdout
 clip
 
-# Copy grep results to clipboard
-grep -rn "TODO" src/ | clip
+# Copy first 5 grep matches to clipboard
+grep -rn "TODO" src/ | clip -l 5
 ```
 
 ### Options
