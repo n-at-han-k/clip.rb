@@ -1,18 +1,53 @@
 # clip
 
-tbc...
-
+A simple clipboard utility for piping content to xclip.
 
 ## Install
-```ruby
+
+```bash
 gem install clip
 ```
 
+Requires `xclip` to be installed on your system.
+
 ## Usage
+
 ```bash
-tbc...
+# Copy file contents to clipboard
+cat file.txt | clip
+
+# Copy and echo the content
+cat file.txt | clip -e
+
+# Copy only the first N lines
+cat file.txt | clip -l 10
+
+# Wrap content in markdown code fence
+cat script.rb | clip -m ruby
+
+# Append to existing clipboard content
+cat more.txt | clip -a
+
+# Paste clipboard contents to stdout
+clip
+
+# Grep outputs filename AND content:
+grep -rn "TODO" src/
+# src/app.rb:42:# TODO: refactor this
+# src/app.rb:87:# TODO: add tests
+# src/lib.rb:12:# TODO: fix bug
+
+# Use -l 1 to copy just the first match (with filename)
+grep -rn "TODO" src/ | clip -l 1
 ```
 
+### Options
+
+- `-l`, `--line NUMBER` - Copy only the first N lines
+- `-e`, `--echo` - Output copied content to stdout
+- `-a`, `--append` - Append to clipboard instead of replacing
+- `-m`, `--markdown [LANGUAGE]` - Wrap in markdown code fence
+- `-h`, `--help` - Print help
 
 ## Contributing
 
@@ -25,13 +60,6 @@ After checking out the repo:
 ```bash
 bin/setup
 bundle exec rake test
-```
-
-Generate documentation:
-
-```bash
-bundle exec yard doc
-bundle exec yard server  # Browse at http://localhost:8808
 ```
 
 ## License
